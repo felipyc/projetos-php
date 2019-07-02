@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+
+#tabela_mostra-usuarios{
+    width: 500px;
+    margin: auto;
+}
+    #tabela_mostra-usuarios td{
+        padding: 5px;
+    }
+
+    #tabela_mostra-usuarios tr:hover{
+        background-color: rgba(0,0,0,.2);
+    }
+
+    tr#tabela_mostra_usuario_header{
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    td.tabela_mostra_usuario_posicao{
+        text-align:  center;
+    }
+    tr.cor_tabela_alternada:nth-child(odd){
+        background-color: red;
+    }
+    tr.cor_tabela_alternada:nth-child(even){
+        background-color: yellow;
+    }

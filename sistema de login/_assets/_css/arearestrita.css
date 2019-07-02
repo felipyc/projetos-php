@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* barra que mostra usuario logado e as opções */
+#menu-left{
+    position: fixed;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    background-color: #0d5b63;
+    text-align: center;
+}
+    .menu-left-separador{
+        margin: 10px 0;
+    }
+        #menu-left-parte1{
+            
+        }
+            img#menu-left-divs-imagemperfil{
+                border-radius: 150px;
+            }
+        #menu-left-parte2{
+            background-color: orange;
+            padding: 10px; 
+            border-radius: 10px; 
+        }
+    #menu-left .menu-left-separador > div{
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        margin: 10px 0;
+    }
+        #link_convite{
+            position: absolute;
+            bottom: 0;
+            left: 320px;
+            
+            width: 1000px;
+            height: 50px;
+
+            background-color: white;
+            border: 2px solid white;
+            line-height: 50px;
+        }
+            #link_convite > a{
+                color: black;
+                text-decoration: none;
+            }
+
+/* parte que mostra a opção selecionada pelo usuario */
+#parte-opcao-escolhida{
+    margin-left: 305px;
+    background-color: rgb(204, 204, 233);
+    min-height: 100vh;
+}
+    /* classes utilizadas*/
+    
+    .opcao-escolhida{
+        padding: 10px;
+    }
+
+    .parte-opcao-escolhida-separador{
+        margin: 10px 0;
+    }
+
+    /* ids */
+    
+    #opcao-escolhida-1{
+        display: block;
+        background-color: #513e8c;
+        min-height: 100vh;        
+    }
+        #opcao-escolhida-1-galeria{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+			
+
+        }
+            .opcao-escolhida-1-galeria{
+                width: 200px;
+                height: 200px;
+                
+                margin: 5px;
+                padding: 5px;
+                transition: all 0.5s;
+            }
+            .opcao-escolhida-1-galeria:hover{
+                border: 1px solid white;
+                border-radius: 5px;
+                transform: scale(1.5);
+            }
+
+    #opcao-escolhida-2{
+        display: none;
+        background-color: #86cec0;
+        width: 100%;
+        height: 100%;   
+    }
+    
+
+
+/* AGUARDANDO SER UTILIZADO */
+    #menu-right-header{
+        background-color: rgb(75, 71, 71);
+        height: 100px;
+        
+    }
+    #menu-right-header > h1{
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        margin-top: 0;
+    }
+    .card{
+        width:300px;
+        background-color: greenyellow;
+        float: left;
+        margin: 5px;
+        padding: 10px;    
+        border-radius: 10px;
+    }
+        .card-header > h1{
+            text-align: center;
+            background-color: cadetblue;
+            border-radius: 5px;
+        }
+        .card-body > p{
+            text-align: justify;
+        }

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+*{
+    font-family: sans-serif;
+    word-wrap: break-word;
+}
+
+h1,h2,h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+#comentarios{
+    width: 600px;
+    margin: auto;
+    background-color: orange;
+    padding: 10px;
+}
+
+    /* CLASSES GENÉRICAS */
+
+    .comentarios_separador{
+        margin: 5px 0;
+    }    
+    
+    /* IDS */
+
+    /* s */
+    #comentarios_dos_usuarios_titulo{
+        margin: 10px 0;
+        text-align: center;
+    }
+    /* ESTRUTURA QUE SEGURA O COMENTARIO DE CADA USUÁRIO */
+    .comentario_usuario_molde{
+        margin: 10px 0;
+        padding: 5px;
+        border: 2px solid white;
+        background-color: #f9f9f9;
+    }
+        .dono_comentario{
+            font-size: 25px;
+        }
+        .data_comentario{
+            font-size: 20px;
+        }
+        .comentario_do_dono_comentario{
+            font-size: 15px;
+        }

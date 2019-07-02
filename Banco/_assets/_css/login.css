@@ -1,0 +1,81 @@
+@charset "utf-8";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;    
+}
+
+
+#centraliza{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: #cdedf3;
+}
+    .separador_area_login{
+        margin: 10px 0;
+    }
+    /* tela com os inputs da agencia, conta, digito e senha */
+    #estrutura_display_numeros{
+        width: 200px;
+        margin: auto;
+    }
+        .estilo_input_login{
+            padding: 5px;
+            border: none;
+            
+            outline: none;
+            
+        }
+        #input_agencia{
+            width: 80px;
+        }
+        #input_conta{
+            width: 80px;
+        }
+        #input_digito{
+            width: 50px;
+        }
+        #input_password{
+            width: 80px;
+        }
+    /* botoes da senha */
+    #estrutura_segura_botoes{
+        width: 165px;
+        height: 220px;
+        margin: auto;
+        border-radius: 5px;
+        background-color: #eaeaea;
+        cursor: pointer;
+    }
+        #estrutura_segura_botoes > div{
+            width: 45px;
+            height: 45px;
+            
+            float: left;
+
+            margin: 5px;    
+            border: 1.5px solid #ababab;
+            border-radius: 5px;
+            
+            
+            background-color: #e4e4e4;
+            
+            text-align: center;
+            line-height: 45px;
+        }
+    #button_login{
+        text-align: center;
+    }
+    #button_login > button{
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #dddddd;        
+    }

@@ -1,6 +1,31 @@
 <?php
     session_start();   
     require "conecta.php";
+
+    $info = "";
+
+    if( !empty($_POST['pEmail']) AND !empty($_POST['pSenha']) ){
+
+        $email = addslashes($_POST['pEmail']);
+        $senha = md5(addslashes($_POST['pSenha']));
+        
+        $sql = "SELECT * FROM sistema WHERE email = :email AND senha = :senha";
+
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue(":email",$email);
+        $sql->bindValue(":senha",$senha);
+        $sql->execute();
+        
+        if($sql->rowCount() > 0){
+            $dados_usuario = $sql->fetch();
+            $_SESSION['id'] = $dados_usuario['id'];
+            header('Location: arearestrita.php');
+            exit;
+        }else{
+            $info = "Dados de login incorreto.";
+        }
+    }
+
 ?>
 <html lang="pt-br">
     <head>
@@ -16,33 +41,12 @@
                 
                 <div class="plSeparapartes">
                     <div id="plLogo">
-                        Appness
+                        GaleryBr
                     </div>
                 </div>
 
                 <div id="mensagem__erro" class="plSeparapartes">
-                    <?php
-                        if( !empty($_POST['pEmail']) AND !empty($_POST['pSenha']) ){
-
-                            $email = addslashes($_POST['pEmail']);
-                            $senha = md5(addslashes($_POST['pSenha']));
-                            
-                            $sql = "SELECT * FROM sistema WHERE email = :email AND senha = :senha";
-
-                            $sql = $pdo->prepare($sql);
-                            $sql->bindValue(":email",$email);
-                            $sql->bindValue(":senha",$senha);
-                            $sql->execute();
-                            
-                            if($sql->rowCount() > 0){
-                                $dados_usuario = $sql->fetch();
-                                $_SESSION['id'] = $dados_usuario['id'];
-                                header('Location: arearestrita.php');
-                            }else{
-                                echo "Dados de login incorreto.";
-                            }
-                        }
-                    ?>
+                    <?=$info?>
                 </div>
 
                 <form method="post">

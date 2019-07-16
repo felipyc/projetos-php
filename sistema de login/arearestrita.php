@@ -1,7 +1,6 @@
-﻿<?php
-    
-    //iniciando sessão
+<?php
     session_start();
+
     $id = $_SESSION['id'];
 
     //chamando arquivos necessários
@@ -171,7 +170,7 @@
             </div>
             <div class="menu-left-separador">
                 <div id="link_convite">
-                    <a href="http://localhost/estudo/cadastro.php?codeinvite=<?php echo $usuario_logado['codeinvite'];?>">Link para convite: http://localhost/projetox/cadastro.php?codeinvite=<?php echo $usuario_logado['codeinvite'];?></a>    
+                    <a href="http://felipy.notadigital.com.br/felipy/sistemalogin/cadastro.php?codeinvite=<?php echo $usuario_logado['codeinvite'];?>">Link para convite: http://felipy.notadigital.com.br/felipy/sistemalogin/cadastro.php?codeinvite=<?php echo $usuario_logado['codeinvite'];?></a>    
                 </div>    
             </div>
             <div class="menu-left-separador">
